@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 const pageTitles: Record<string, string> = {
   '/': 'Dashboard',
+  '/enhance': 'Enhance infrared image',
   '/datasets': 'Datasets',
   '/scenes': 'Scenes',
   '/preprocessing': 'Preprocessing',

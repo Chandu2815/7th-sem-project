@@ -13,11 +13,13 @@ import {
   Settings,
   Search,
   FileUp,
+  Sparkles,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navCommands = [
-  { id: 'dashboard', label: 'Dashboard', path: '/', icon: LayoutDashboard, group: 'Navigation' },
+  { id: 'enhance', label: 'Enhance IR image', path: '/enhance', icon: Sparkles, group: 'Navigation' },
+  { id: 'dashboard', label: 'Dashboard', path: '/dashboard', icon: LayoutDashboard, group: 'Navigation' },
   { id: 'datasets', label: 'Datasets', path: '/datasets', icon: Database, group: 'Navigation' },
   { id: 'scenes', label: 'Scenes', path: '/scenes', icon: Layers, group: 'Navigation' },
   { id: 'preprocessing', label: 'Preprocessing', path: '/preprocessing', icon: Wrench, group: 'Navigation' },

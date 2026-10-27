@@ -10,13 +10,16 @@ import { TrainingPage } from '@/features/training/TrainingPage'
 import { EvaluationPage } from '@/features/evaluation/EvaluationPage'
 import { OutputsPage } from '@/features/outputs/OutputsPage'
 import { SettingsPage } from '@/features/settings/SettingsPage'
+import { EnhancePage } from '@/features/enhance/EnhancePage'
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route index element={<DashboardPage />} />
+          <Route index element={<Navigate to="/enhance" replace />} />
+          <Route path="enhance" element={<EnhancePage />} />
+          <Route path="dashboard" element={<DashboardPage />} />
           <Route path="datasets" element={<DatasetsPage />} />
           <Route path="scenes" element={<ScenesPage />} />
           <Route path="scenes/:id" element={<SceneDetailsPage />} />

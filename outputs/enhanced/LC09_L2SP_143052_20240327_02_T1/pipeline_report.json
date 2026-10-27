@@ -1,0 +1,99 @@
+{
+  "scene_id": "LC09_L2SP_143052_20240327_02_T1",
+  "status": "completed",
+  "mode": "guided",
+  "enhanced_thermal_path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\enhanced\\LC09_L2SP_143052_20240327_02_T1\\thermal_sr.tif",
+  "colorized_path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\enhanced\\LC09_L2SP_143052_20240327_02_T1\\colorized.tif",
+  "geotiff_path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\enhanced\\LC09_L2SP_143052_20240327_02_T1\\enhanced_stack.tif",
+  "preview_path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\enhanced\\LC09_L2SP_143052_20240327_02_T1\\colorized_preview.png",
+  "evaluation": {
+    "psnr": 25.435795739718493,
+    "ssim": 0.7967511650048049,
+    "lpips": 0.042774555569556616,
+    "rmse": 0.053482316900719994,
+    "scene_id": "LC09_L2SP_143052_20240327_02_T1",
+    "model_version": "thermal-swinir-v0.1",
+    "notes": "lpips is a proxy metric without AlexNet weights"
+  },
+  "preprocess": {
+    "num_patches": 152,
+    "metadata": {
+      "thermal_stats": {
+        "mean": 316.69330463050085,
+        "std": 6.930634153066724
+      },
+      "rgb_stats": [
+        {
+          "mean": 0.06120179512631687,
+          "std": 0.04610116676414689
+        },
+        {
+          "mean": 0.09767786988063594,
+          "std": 0.05060511606177094
+        },
+        {
+          "mean": 0.1216157287499832,
+          "std": 0.061635534974495754
+        }
+      ],
+      "retained_pct": 98.21576246512512,
+      "patch_size": 128,
+      "stride": 512,
+      "scale_factor": 4,
+      "crs": "EPSG:32644"
+    },
+    "steps": [
+      {
+        "id": "raw-scene",
+        "name": "Raw Scene",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "radiometric-calibration",
+        "name": "Radiometric Calibration",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "cloud-masking",
+        "name": "Cloud Masking",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "thermal-rgb-alignment",
+        "name": "Thermal-RGB Alignment",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "normalization",
+        "name": "Normalization",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "patch-extraction",
+        "name": "Patch Extraction",
+        "status": "completed",
+        "progress": 100
+      },
+      {
+        "id": "processed-dataset",
+        "name": "Processed Dataset",
+        "status": "completed",
+        "progress": 100
+      }
+    ]
+  },
+  "logs": [
+    "Pipeline start: LC09_L2SP_143052_20240327_02_T1",
+    "Reusing existing preprocess artifacts",
+    "SwinIR enhance (status=random_init)",
+    "Enhanced thermal shape: (4096, 4016)",
+    "Colorization mode: guided",
+    "Eval PSNR=25.44 SSIM=0.797"
+  ],
+  "created_at": "2026-08-12T13:53:51.300750+00:00"
+}

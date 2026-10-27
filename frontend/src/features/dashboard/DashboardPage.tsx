@@ -49,11 +49,11 @@ export function DashboardPage() {
                 and guided colorization via SwinIR architecture.
               </p>
               <div className="flex gap-3 mt-6">
-                <Link to="/datasets">
-                  <Button>Browse Datasets <ArrowRight className="h-4 w-4" /></Button>
+                <Link to="/enhance">
+                  <Button>Enhance an IR image <ArrowRight className="h-4 w-4" /></Button>
                 </Link>
-                <Link to="/models">
-                  <Button variant="secondary">View Pipeline</Button>
+                <Link to="/datasets">
+                  <Button variant="secondary">Browse Datasets</Button>
                 </Link>
               </div>
             </div>

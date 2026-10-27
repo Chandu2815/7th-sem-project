@@ -1,0 +1,150 @@
+{
+  "scene_id": "LC09_L2SP_143052_20240327_02_T1",
+  "scene_dir": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\dataset\\raw\\LC09_L2SP_143052_20240327_02_T1",
+  "bands_present": [
+    "ST_B10",
+    "SR_B2",
+    "SR_B3",
+    "SR_B4"
+  ],
+  "bands_missing": [],
+  "metadata": {
+    "ST_B10": {
+      "name": "ST_B10",
+      "path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\dataset\\raw\\LC09_L2SP_143052_20240327_02_T1\\ST_B10.tif",
+      "width": 7641,
+      "height": 7791,
+      "crs": "EPSG:32644",
+      "resolution_x": 30.0,
+      "resolution_y": 30.0,
+      "bounds": [
+        108585.0,
+        1162785.0,
+        337815.0,
+        1396515.0
+      ],
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "count": 1
+    },
+    "SR_B2": {
+      "name": "SR_B2",
+      "path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\dataset\\raw\\LC09_L2SP_143052_20240327_02_T1\\SR_B2.tif",
+      "width": 7641,
+      "height": 7791,
+      "crs": "EPSG:32644",
+      "resolution_x": 30.0,
+      "resolution_y": 30.0,
+      "bounds": [
+        108585.0,
+        1162785.0,
+        337815.0,
+        1396515.0
+      ],
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "count": 1
+    },
+    "SR_B3": {
+      "name": "SR_B3",
+      "path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\dataset\\raw\\LC09_L2SP_143052_20240327_02_T1\\SR_B3.tif",
+      "width": 7641,
+      "height": 7791,
+      "crs": "EPSG:32644",
+      "resolution_x": 30.0,
+      "resolution_y": 30.0,
+      "bounds": [
+        108585.0,
+        1162785.0,
+        337815.0,
+        1396515.0
+      ],
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "count": 1
+    },
+    "SR_B4": {
+      "name": "SR_B4",
+      "path": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\dataset\\raw\\LC09_L2SP_143052_20240327_02_T1\\SR_B4.tif",
+      "width": 7641,
+      "height": 7791,
+      "crs": "EPSG:32644",
+      "resolution_x": 30.0,
+      "resolution_y": 30.0,
+      "bounds": [
+        108585.0,
+        1162785.0,
+        337815.0,
+        1396515.0
+      ],
+      "dtype": "uint16",
+      "nodata": 0.0,
+      "count": 1
+    }
+  },
+  "statistics": {
+    "ST_B10": {
+      "name": "ST_B10",
+      "min": 39015.0,
+      "max": 59429.0,
+      "mean": 48906.948140400564,
+      "median": 49072.0,
+      "std": 2222.1478717354626,
+      "valid_pixel_count": 40693199,
+      "nodata_pixel_count": 18837832
+    },
+    "SR_B2": {
+      "name": "SR_B2",
+      "min": 1.0,
+      "max": 54036.0,
+      "mean": 10005.550285581521,
+      "median": 9322.0,
+      "std": 3692.857744997822,
+      "valid_pixel_count": 40695035,
+      "nodata_pixel_count": 18835996
+    },
+    "SR_B3": {
+      "name": "SR_B3",
+      "min": 469.0,
+      "max": 56919.0,
+      "mean": 11314.950921682872,
+      "median": 10646.0,
+      "std": 3573.538513188504,
+      "valid_pixel_count": 40698543,
+      "nodata_pixel_count": 18832488
+    },
+    "SR_B4": {
+      "name": "SR_B4",
+      "min": 1232.0,
+      "max": 56946.0,
+      "mean": 12184.396184551373,
+      "median": 11594.0,
+      "std": 3788.4532539646325,
+      "valid_pixel_count": 40698543,
+      "nodata_pixel_count": 18832488
+    }
+  },
+  "alignment": {
+    "crs_match": true,
+    "bounds_overlap_ratio": 1.0,
+    "thermal_resolution_m": 30.0,
+    "rgb_resolution_m": 30.0,
+    "resolution_ratio": 1.0,
+    "shape_ratio_height": 1.0,
+    "shape_ratio_width": 1.0,
+    "status": "warn",
+    "messages": [
+      "CRS consistent across all bands (EPSG:32644).",
+      "Thermal/RGB bounds overlap ratio: 1.000",
+      "Resolution ratio thermal/RGB: 1.000 (expected ~3.33)",
+      "Shape ratio H\u00d7W thermal/RGB: 1.000 \u00d7 1.000 (expected ~0.300)",
+      "WARN: resolution or shape ratio outside \u00b115% tolerance."
+    ]
+  },
+  "outputs": {
+    "thermal_preview": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\previews\\LC09_L2SP_143052_20240327_02_T1\\thermal_preview.png",
+    "rgb_composite": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\previews\\LC09_L2SP_143052_20240327_02_T1\\rgb_composite.png",
+    "histograms": "C:\\Users\\Dell\\OneDrive\\Desktop\\4th year project\\Major-Project\\outputs\\previews\\LC09_L2SP_143052_20240327_02_T1\\histograms.png"
+  },
+  "generated_at": "2026-08-12T13:48:55Z"
+}

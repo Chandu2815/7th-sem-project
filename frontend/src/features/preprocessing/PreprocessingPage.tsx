@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, ChevronUp, Terminal, CheckCircle2, Loader2, Clock } from 'lucide-react'
-import { fetchPreprocessingSteps, fetchPreprocessingLogs } from '@/api'
+import { fetchPreprocessingSteps, fetchPreprocessingLogs, fetchScenes, runPipeline } from '@/api'
 import { useAsyncData } from '@/hooks/useAsyncData'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
@@ -19,8 +19,32 @@ const statusConfig: Record<ProcessingStepStatus, { icon: typeof CheckCircle2; co
 
 export function PreprocessingPage() {
   const [logsOpen, setLogsOpen] = useState(false)
-  const { data: steps, loading } = useAsyncData(() => fetchPreprocessingSteps())
-  const { data: logs } = useAsyncData(() => fetchPreprocessingLogs())
+  const [running, setRunning] = useState(false)
+  const [runMsg, setRunMsg] = useState<string | null>(null)
+  const { data: steps, loading, refetch: refetchSteps } = useAsyncData(() => fetchPreprocessingSteps())
+  const { data: logs, refetch: refetchLogs } = useAsyncData(() => fetchPreprocessingLogs())
+
+  async function handleRun() {
+    setRunning(true)
+    setRunMsg(null)
+    try {
+      const scenes = await fetchScenes()
+      const sceneId = scenes[0]?.sceneId
+      if (!sceneId) {
+        setRunMsg('No local scenes in dataset/raw — download first.')
+        return
+      }
+      setRunMsg(`Running pipeline on ${sceneId}…`)
+      await runPipeline(sceneId)
+      setRunMsg(`Completed: ${sceneId}`)
+      await refetchSteps()
+      await refetchLogs()
+    } catch (e) {
+      setRunMsg(e instanceof Error ? e.message : 'Pipeline failed — is the API running?')
+    } finally {
+      setRunning(false)
+    }
+  }
 
   if (loading || !steps) {
     return <div className="h-64 rounded-2xl border border-border animate-pulse" />
@@ -33,8 +57,11 @@ export function PreprocessingPage() {
           <div>
             <h2 className="text-xl font-semibold tracking-tight">Preprocessing Pipeline</h2>
             <p className="text-sm text-muted mt-1">Landsat Collection 2 Level-2 radiometric and geometric preparation</p>
+            {runMsg && <p className="text-xs text-muted mt-2">{runMsg}</p>}
           </div>
-          <Button size="sm">Run Pipeline</Button>
+          <Button size="sm" onClick={handleRun} disabled={running}>
+            {running ? 'Running…' : 'Run Pipeline'}
+          </Button>
         </div>
       </FadeIn>
 

@@ -12,9 +12,9 @@ export function AppLayout() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />
-      <div className="ml-[68px] flex min-h-screen flex-col">
+      <div className="ml-[200px] flex min-h-screen flex-col">
         <CommandBar onOpenCommand={() => setOpen(true)} />
-        <main className="flex-1 p-8 max-w-[1400px]">
+        <main className="flex-1 p-6 sm:p-8 max-w-[1400px]">
           <AnimatePresence mode="wait">
             <PageTransition key={location.pathname}>
               <Outlet context={{ openImportModal: () => setOpen(false) }} />
